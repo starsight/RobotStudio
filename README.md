@@ -4,7 +4,7 @@
 
 ## Building Steps
 
-1. 首先从https://www.qt.io/download下载Qt，按步骤安装Qt Creator，选择安装目录（本文档Qt安装目录为E:\）,  并选择Qt源码版本为Qt5.9.3，并选择MinGw5.3.0 32bit编译器。然后修改环境变量PATH添加E:\Qt\5.9.2\mingw53_32\bin和E:\Qt\Tools\mingw530_32\bin两个路径
+1. 首先从[https://www.qt.io/download](https://www.qt.io/download)下载Qt，按步骤安装Qt Creator，选择安装目录（本文档Qt安装目录为E:\）,  并选择Qt源码版本为Qt5.9.3，并选择MinGw5.3.0 32bit编译器。然后修改环境变量PATH添加E:\Qt\5.9.2\mingw53_32\bin和E:\Qt\Tools\mingw530_32\bin两个路径
 
 2.  拷贝软件程序\系统配置与参数管理软件目录下的Python27文件夹到自定义目录（本文档将Python27拷贝到E:\），修改用户环境变量PATH，添加E:\Python27;E:\Python27\Scripts两个路径。注：Python为32位版本。
 

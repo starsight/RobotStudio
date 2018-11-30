@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/if_calendar-24_103185.png</file>
+        <file>icon/if_checkround-24_103183.png</file>
+        <file>icon/if_copy.png</file>
+        <file>icon/if_copy1.png</file>
+        <file>icon/if_cut.png</file>
+        <file>icon/if_cut2.png</file>
+        <file>icon/if_delete.png</file>
+        <file>icon/if_folder-open.png</file>
+        <file>icon/if_folder-open2.png</file>
+        <file>icon/if_help.png</file>
+        <file>icon/if_menu.png</file>
+        <file>icon/if_new.png</file>
+        <file>icon/if_new2.png</file>
+        <file>icon/if_order.png</file>
+        <file>icon/if_paste.png</file>
+        <file>icon/if_Paste2.png</file>
+        <file>icon/if_play.png</file>
+        <file>icon/if_plus-24_103172.png</file>
+        <file>icon/if_quit.png</file>
+        <file>icon/if_redo.png</file>
+        <file>icon/if_save.png</file>
+        <file>icon/if_settings.png</file>
+        <file>icon/if_undo.png</file>
+        <file>icon/build.png</file>
+        <file>icon/download.png</file>
+        <file>icon/connect.png</file>
+        <file>icon/reboot.png</file>
+        <file>icon/refresh.png</file>
+    </qresource>
+</RCC>

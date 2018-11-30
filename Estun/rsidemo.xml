@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <DECLARE>
+        <VARIABLES>
+            <VAR NAME="AP1" TYPE="DOUBLE"/>
+            <VAR NAME="AP2" TYPE="DOUBLE"/>
+            <VAR NAME="AP3" TYPE="DOUBLE"/>
+            <VAR NAME="AP4" TYPE="UINT64"/>
+            <VAR NAME="AP5" TYPE="DOUBLE"/>
+            <VAR NAME="AP6" TYPE="DOUBLE"/>
+            <VAR NAME="KX" TYPE="DOUBLE"/>
+            <VAR NAME="KY" TYPE="DOUBLE"/>
+            <VAR NAME="KZ" TYPE="DOUBLE"/>
+            <VAR NAME="KA" TYPE="DOUBLE"/>
+            <VAR NAME="KB" TYPE="DOUBLE"/>
+            <VAR NAME="KC" TYPE="DOUBLE"/>
+            <VAR NAME="STOP" TYPE="BOOL"/>
+        </VARIABLES>
+        <FUNBLOCK/>
+    </DECLARE>
+    <COMMUNICATION>
+        <CONFIG>
+            <COM_TYPE>UDP</COM_TYPE>
+            <IP>192.168.2.2</IP>
+            <PORT>8888</PORT>
+            <TOLERAT>12</TOLERAT>
+            <ROOTNAME>Root</ROOTNAME>
+            <SENSORTYPE>TERMINAL</SENSORTYPE>
+            <SENSORMODE>CYCLIC</SENSORMODE>
+        </CONFIG>
+        <SEND>
+            <ELEMENTS>
+                <ELEMENT TAG="APOS.A1" VAR="AP1" TYPE="DOUBLE"/>
+                <ELEMENT TAG="APOS.A2" VAR="AP2" TYPE="DOUBLE"/>
+                <ELEMENT TAG="APOS.A3" VAR="AP3" TYPE="DOUBLE"/>
+                <ELEMENT TAG="APOS.A4" VAR="AP4" TYPE="UINT64"/>
+                <ELEMENT TAG="APOS.A5" VAR="AP5" TYPE="DOUBLE"/>
+                <ELEMENT TAG="APOS.A6" VAR="AP6" TYPE="DOUBLE"/>
+            </ELEMENTS>
+        </SEND>
+        <RECEIVE>
+            <ELEMENTS>
+                <ELEMENT TAG="RKorr.X" VAR="KX" TYPE="DOUBLE"/>
+                <ELEMENT TAG="RKorr.Y" VAR="KY" TYPE="DOUBLE"/>
+                <ELEMENT TAG="RKorr.Z" VAR="KZ" TYPE="DOUBLE"/>
+                <ELEMENT TAG="RKorr.A" VAR="KA" TYPE="DOUBLE"/>
+                <ELEMENT TAG="RKorr.Y" VAR="KY" TYPE="DOUBLE"/>
+                <ELEMENT TAG="RKorr.Z" VAR="KZ" TYPE="DOUBLE"/>
+                <ELEMENT TAG="STOP.stopFlag" VAR="STOP" TYPE="BOOL"/>
+            </ELEMENTS>
+        </RECEIVE>
+    </COMMUNICATION>
+</Root>

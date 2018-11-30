@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns:ns1="http://www.plcopen.org/xml/tc6_0201" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="未知" productName="未命名" productVersion="1" creationDateTime="2018-01-05T00:28:37"/>
+  <contentHeader name="Project1" modificationDateTime="2018-01-14T18:44:09">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="0" y="0"/>
+      </fbd>
+      <ld>
+        <scaling x="0" y="0"/>
+      </ld>
+      <sfc>
+        <scaling x="0" y="0"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes>
+      <dataType name="datatype0">
+        <baseType>
+          <REAL/>
+        </baseType>
+        <initialValue>
+          <simpleValue value="1.0"/>
+        </initialValue>
+      </dataType>
+      <dataType name="datatype1">
+        <baseType>
+          <struct>
+            <variable name="pp">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+            <variable name="qq">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+      </dataType>
+    </dataTypes>
+    <pous>
+      <pou name="program0" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="LocalVar0">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </localVars>
+          <inputVars>
+            <variable name="input1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="output2">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+          <inOutVars>
+            <variable name="inout">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+          </inOutVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[I am ychj；；
+ She is cdj]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="program1" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="LocalVar0">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </localVars>
+          <inputVars>
+            <variable name="input2">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="output3">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </outputVars>
+          <inOutVars>
+            <variable name="inout">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </inOutVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[LocalVar0 := -1;
+output3 := input2;
+]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="fun0" pouType="function">
+        <interface>
+          <returnType>
+            <REAL/>
+          </returnType>
+          <inputVars retain="true">
+            <variable name="var1">
+              <type>
+                <REAL/>
+              </type>
+              <initialValue>
+                <simpleValue value="8.0"/>
+              </initialValue>
+            </variable>
+          </inputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[LocalVar0 := 2;
+output := LocalVar0;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="FB0" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="LocalVar0">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </localVars>
+          <outputVars>
+            <variable name="output2">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[LocalVar0 := 0;
+output2 := LocalVar0;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="config">
+        <resource name="resource1">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="program0"/>
+          </task>
+          <globalVars retain="true">
+            <variable name="globalVar">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="True"/>
+              </initialValue>
+            </variable>
+          </globalVars>
+        </resource>
+        <resource name="resource0">
+          <task name="task1" priority="7" single="LocalVar1">
+            <pouInstance name="inst" typeName="program1"/>
+          </task>
+          <task name="task2" priority="4" interval="T#8ms"/>
+          <globalVars>
+            <variable name="LocalVar0">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+            <variable name="LocalVar1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </globalVars>
+          <pouInstance name="pg2" typeName="program0"/>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>

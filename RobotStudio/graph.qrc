@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>robotmodel/NormalRobot.png</file>
+        <file>robotmodel/Other.png</file>
+    </qresource>
+</RCC>

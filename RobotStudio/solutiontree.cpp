@@ -8,7 +8,9 @@ SolutionTree::SolutionTree(QString path,QString projectName,QWidget* parent)
   this->setHeaderHidden(true);
   QTreeWidgetItem* projectItem = new QTreeWidgetItem(this,QStringList()<< projectName,0);
   QTreeWidgetItem* rbtConfig = new QTreeWidgetItem(QStringList()<<tr("机器人参数配置"),-1);
+  QTreeWidgetItem* plcUnit = new QTreeWidgetItem(QStringList()<<tr("PLC模块单元测试"),-3);
   projectItem->addChild(rbtConfig);
+  projectItem->addChild(plcUnit);
   loadFiles(path,projectItem);
   this->insertTopLevelItem(0,projectItem);
 

@@ -22,6 +22,7 @@
 
 #include <QProcess>   // 调用PLC编译器 及 字节码生成器
 
+#include "unit.h"
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -61,6 +62,8 @@ private slots:
     void compilerError(QProcess::ProcessError error);
     void printCompilerErrors();
 //    void showAdditionMenu(QTreeWidgetItem*,int);
+
+    void createNewPLCUnit();
 private:
     QAction* openAction;
     QAction* newAction;
@@ -84,6 +87,8 @@ private:
     QAction* rebootAction;
     QAction* refreshAction;
 
+    QAction* plcUnitAction;
+
     QGridLayout* mainLayout;
 //    QWidget* mainWidget;
     QStackedWidget* mainWidget;
@@ -96,6 +101,9 @@ private:
     SolutionTree* solutionTree;
     RobotConfig* rbtConfig;
     RSIconfig* rsiConfig;
+
+    Unit* unit;
+
     QTextEdit* mainTextEditor;
     LibraryTreeWidget* plcLibraryTree;
 

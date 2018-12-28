@@ -37,7 +37,8 @@ SOURCES += \
     taskintervaldelegate.cpp \
     ftptransfer.cpp \
     rsiconfig.cpp \
-    plclibrarytreewidget.cpp
+    plclibrarytreewidget.cpp \
+    unit.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,7 +53,8 @@ HEADERS += \
     taskintervaldelegate.h \
     ftptransfer.h \
     rsiconfig.h \
-    plclibrarytreewidget.h
+    plclibrarytreewidget.h \
+    unit.h
 
 RESOURCES += \
     icon.qrc \
@@ -194,3 +196,6 @@ DISTFILES += \
     PLCPython/POULibrary.py \
     PLCPython/ProjectControllerPy.py \
     PLCPython/py_ext/README
+
+FORMS += \
+    unit.ui

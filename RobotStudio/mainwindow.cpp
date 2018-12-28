@@ -108,6 +108,10 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
  * @brief MainWindow::createActions 创建工程菜单栏工具栏的动作
  */
 void MainWindow::createActions(){
+    plcUnitAction = new QAction(QIcon(":/icon/if_new"),tr("&New PLC Unit"),this);
+    plcUnitAction->setStatusTip(tr("Create a new plc unit"));
+    connect(plcUnitAction,SIGNAL(triggered(bool)),this,SLOT(createNewPLCUnit()));
+
     openAction = new QAction(QIcon(":/icon/if_folder-open"),tr("&Open Project"),this);
     openAction->setShortcuts(QKeySequence::Open);
     openAction->setStatusTip(tr("Open an existing project"));
@@ -195,6 +199,9 @@ void MainWindow::createMenuBar(){
     edit->addAction(cutAction);
     edit->addAction(copyAction);
     edit->addAction(pasteAction);
+
+    QMenu *unit = menuBar()->addMenu(tr("&Unit"));
+    unit->addAction(plcUnitAction);
 }
 
 /**
@@ -223,6 +230,9 @@ void MainWindow::createDockWidget(){
     rightDockWidget->hide();
 }
 
+void MainWindow::createNewPLCUnit(){
+
+}
 
 /**
  * @brief MainWindow::openProject
@@ -483,7 +493,17 @@ void MainWindow::showRobotConfigWindow(QTreeWidgetItem* item,int /*column*/)
         parent = item->parent();
     }
     rightDockWidget->hide();
-    if(itemType == -2){
+    if(itemType == -3){
+        if(unit == nullptr)
+            unit = new Unit(this);
+        if(mainWidget->indexOf(unit) == -1)
+            mainWidget->addWidget(unit);
+         int index = mainWidget->indexOf(unit);
+         if(index != stackIndex){
+             stackIndex = index;
+             emit currentTreeIndex(stackIndex);
+         }
+    }else if(itemType == -2){
         if(rsiConfig == nullptr)
             rsiConfig = new RSIconfig(projectPath,this);
         if(mainWidget->indexOf(rsiConfig) == -1)
